@@ -170,7 +170,8 @@ Because the first-party payloads live directly in the server HTML, raw-vs-render
       var run = params.get('run') || 'TP';
       var s = document.createElement('script');
       s.src = 'https://samtout.github.io/tp-test-assets/widget_v2.js?run=' + encodeURIComponent(run);
-      s.defer = true;
+      // s.defer = true;
+      s.async = false;
       document.body.appendChild(s);
     })();
   </script>
